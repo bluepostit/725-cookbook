@@ -7,6 +7,7 @@
 #  - destroy
 
 require_relative 'view'
+require_relative 'scrape_all_recipes_service'
 
 class Controller
   def initialize(cookbook)
@@ -38,5 +39,15 @@ class Controller
     list
     index = @view.ask_user_for_index
     @cookbook.remove_recipe(index)
+  end
+
+  def import
+    keyword = @view.ask_user_for('ingredient')
+    results = ScrapeAllRecipesService.new(keyword).call
+    @view.display(results)
+
+    index = @view.ask_user_for_index
+    recipe = results[index]
+    @cookbook.add_recipe(recipe)
   end
 end
