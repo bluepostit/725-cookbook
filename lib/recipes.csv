@@ -1,6 +1,6 @@
-name,description,rating,prep_time
-Pizza,Cheese & pepperonis,5,20m
-cheesecake,delicious dessert,4,30m
-Waldorf salad,healthy and sweet,4,15m
-Spicy Jalapeno-Bacon Mac and Cheese,This mac and cheese has an intense sharp Cheddar cheese flavor with the kick of the jalapenos.,5,20m
-"White Chocolate, Chocolate Cookies",The reverse Chocolate Chip cookie. Rich dark chocolate with white chocolate chips.,5,35 mins
+name,description,rating,prep_time,done
+Pizza,Cheese & pepperonis,5,20m,false
+cheesecake,delicious dessert,4,30m,false
+Waldorf salad,healthy and sweet,4,15m,false
+Spicy Jalapeno-Bacon Mac and Cheese,This mac and cheese has an intense sharp Cheddar cheese flavor with the kick of the jalapenos.,5,20m,true
+"White Chocolate, Chocolate Cookies",The reverse Chocolate Chip cookie. Rich dark chocolate with white chocolate chips.,5,35 mins,true

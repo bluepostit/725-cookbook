@@ -52,4 +52,10 @@ class Controller
     recipe = results[index]
     @cookbook.add_recipe(recipe)
   end
+
+  def mark_as_done
+    list
+    index = @view.ask_user_for_index
+    @cookbook.mark_as_done(index)
+  end
 end

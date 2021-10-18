@@ -6,5 +6,15 @@ class Recipe
     @description = attributes[:description]
     @rating = attributes[:rating] || 0
     @prep_time = attributes[:prep_time]
+    # Default value: `false`, in case we got `nil` from the hash.
+    @done = attributes[:done] || false
+  end
+
+  def done?
+    @done
+  end
+
+  def mark_as_done!
+    @done = true
   end
 end
