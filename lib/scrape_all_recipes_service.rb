@@ -18,7 +18,8 @@ class ScrapeAllRecipesService
     doc.search('.card__detailsContainer').first(5).map do |element|
       name = element.search('.card__title').text.strip
       description = element.search('.card__summary').text.strip
-      Recipe.new(name, description)
+      rating = element.search('.rating-star.active').count
+      Recipe.new({ name: name, description: description, rating: rating })
     end
   end
 end
